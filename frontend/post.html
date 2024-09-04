@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postbook</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap"
+ rel="stylesheet">
+    <link rel="stylesheet" href="./poststyle.css"/>
+</head>
+<body onload = "checkLoggedInUser() ; onload = showLoggedUsername() ">
+
+    <div class="header">
+        <h1>Hello, <span id="logged-username">Username</span></h1>
+        <button onclick="logOut()"class ="logoutBtn">Logout</button>
+    </div>
+   <section id="add-post-container">
+ <article>
+    <h2>Add New Post</h2>
+ <div>
+    <textarea name=""
+    id="newPost-text" 
+    cols="50"
+    rows="5" 
+    placeholder="Add post text"
+    ></textarea>
+ </div>
+ <div>
+    <input type="text"
+    id ="newPost-image"
+    placeholder="Add post image url">
+ </div>
+ <div>
+    <button onclick ="handleAddNewPost()"class="addPost-btn">POST </button>
+ </div>
+ </article>
+   </section>
+    
+    <section id="post-container">
+        <!--post-->
+        <div class ="post">
+            <div class="post-header">
+                <div class="post-user-image">
+                    <img 
+                    src=" https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg"
+                    alt="p"
+                    />
+                </div>
+                <div class="post-username-time">
+                    <p class="post-username">username</p>
+                    <div class="posted-time">
+                        <span>13</span>
+                        <span>hours ago</span>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="post-text">
+                <p class="post-text-container">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi nisi accusamus atque, libero reprehenderit ab pariatur eligendi modi molestias nostrum illo, provident impedit! Necessitatibus ad suscipit eaque quam ipsa quo!</p>
+            </div>
+        <div class="post-image">
+            <img src="https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg"alt="post-image"
+            />
+        </div>
+          <!--coments under a single post-->
+          <div class="comments-holder">
+           <div class="comment">
+             <div class="comment-user-image">
+                <img src="https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg"
+                alt="comment-user-image"
+                />
+             </div>
+             <div class="comment-text-container">
+                <h4>Commented username</h4>
+                <p class="comment-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, temporibus.
+                </p>
+                </div>
+                </div>
+                <div class="comments-holder">
+                    <div class="comment">
+                      <div class="comment-user-image">
+                         <img src="https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg"
+                         alt="comment-user-image"
+                         />
+                      </div>
+                      <div class="comment-text-container">
+                         <h4>Commented username</h4>
+                         <p class="comment-text">
+                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, temporibus.
+                         </p>
+                         </div>
+                         </div>
+                         <div class="comments-holder">
+                            <div class="comment">
+                              <div class="comment-user-image">
+                                 <img src="https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg"
+                                 alt="comment-user-image"
+                                 />
+                              </div>
+                              <div class="comment-text-container">
+                                 <h4>Commented username</h4>
+                                 <p class="comment-text">
+                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, temporibus.
+                                 </p>
+                                 </div>
+                                 </div>
+          
+           </div>
+          </div>
+          <!--new comment input field-->
+          <div class="postComment-holder">
+            <div class="postComment-input-field-holder">
+                <input type="text" placeholder="Post your comment"
+                 class="postComment-input-field"
+                  id="postComment-input-for-postId1"
+                  />
+
+            </div>
+<div class="comment-btn-holder">
+    <button id="comment-btn" class="postComment-btn">Comment</button>
+    
+</div>
+          </div>
+        </div>
+        <!--Robon-->  
+   
+</div>
+    </section>
+    <script src="./js/utils/calculateTimeDifference.js"></script>
+    <script src="./js/fetchData.js"></script>
+</body>
+</html>
